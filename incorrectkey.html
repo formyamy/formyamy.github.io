@@ -14,7 +14,7 @@
 	<script>
 		function myFunction() {
                         var link = "http://formyamy.github.io/" + document.getElementById("key").value + ".html";
-			var link2 = link.replace(" ", "");
+			var link2 = link.replace(/ /g, '');
     			document.getElementById("link").href = link2;
 		}
 

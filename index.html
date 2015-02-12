@@ -3,12 +3,10 @@
 	<body>
 	<center>
 		<h1>Hi Amy :) Please enter a key: </h1>
-	<font size="5">
-		<input type="text" id="key" value="">
+		<input type="text" id="key" style="height:30px; width:400px; font-size: 20pt" value="" onkeypress="searchKeyPress(event);">
 	<br>
 	<br>
-		<a id="link" onclick="myFunction()" href=""><button>Go!</button></a>
-	</font>
+		<a id="link" onclick="myFunction()" href=""><button id="button" style="height:35px; width:60px; font-size: 17pt">Go!</button></a>
 	</center>
 
 	<script>
@@ -16,6 +14,16 @@
     			document.getElementById("link").href = 
 			"http://formyamy.github.io/" + document.getElementById("key").value + ".html"
 		}
+
+		function searchKeyPress(e)
+   		{
+       			// look for window.event in case event isn't passed in
+        		if (typeof e == 'undefined' && window.event) { e = window.event; }
+        		if (e.keyCode == 13)
+        		{
+            			document.getElementById("button").click();
+        		}
+    		}
 	</script>
 	</body>
 </html>

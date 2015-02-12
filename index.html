@@ -4,27 +4,18 @@
 <center>
 <h1>Hi Amy :) Please enter a key: </h1>
 
-Password: <input type="password" id="key" value="">
-
-<button type="button" onclick="myFunction()">Go!</button>
-    
-<p id="demo"></p>
+<input type="text" id="key" value="">
+<br>
+<a id="link" onclick="myFunction()" href=""><button>Go!</button></a>
 
 </center>
 <script>
 function myFunction() {
     var x = document.getElementById("key");
-    var defaultVal = x.defaultValue;
     var currentVal = x.value;
     
-    if (defaultVal == currentVal) {
-        document.getElementById("demo").innerHTML = "Default value and current value is the same: "
-        + x.defaultValue + " and " + x.value
-        + "<br>Change the value of the password field to see the difference!";
-    } else {
-        document.getElementById("demo").innerHTML = "The default value was: " + defaultVal
-        + "<br>The new, current value is: " + currentVal;
-    }
+    if (currentVal == "google") 
+    	document.getElementById("link").href = "http://www.google.com";
 }
 </script>
 

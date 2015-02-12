@@ -14,12 +14,11 @@ function myFunction() {
     var x = document.getElementById("key");
     var currentVal = x.value;
     
-    if (currentVal == "google") 
-    	document.getElementById("link").href = "http://www.google.com";
-    if (currentVal == "test") 
-    	document.getElementById("link").href = "http://formyamy.github.io/test.html";
+    var link = "http://formyamy.github.io/" + currentVal + ".html";
+
+    document.getElementById("link").href = link;
+
 }
 </script>
-
 </body>
 </html>

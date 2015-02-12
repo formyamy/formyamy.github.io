@@ -15,8 +15,9 @@
 	<script>
 		function myFunction() {
                         var link = "http://formyamy.github.io/" + document.getElementById("key").value + ".html";
-			var link2 = link.toLowerCase().replace(/ /g, '');
-    			document.getElementById("link").href = link2;
+			var link2 = link.replace(/ /g, '');
+                        var link3 = link2.toLowerCase();
+    			document.getElementById("link").href = link3;
 		}
 
 		function searchKeyPress(e)
